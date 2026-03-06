@@ -83,6 +83,7 @@ plt.figure(figsize=(10, 6))
 plt.plot(t / DAY_S, mag_diff_A, label='Observer A (Remains on Earth)', linestyle='--')
 plt.plot(t / DAY_S, mag_diff_B, label='Observer B (Departs on day 0)')
 plt.plot(t / DAY_S, mag_diff_C, label='Observer C (Departs around day 182)')
+plt.yticks(np.arange(0, 101, 10))
 
 plt.xlabel('Time (days)')
 plt.ylabel('Velocity difference magnitude (km/s)')

@@ -1,13 +1,18 @@
 # Triplet experiment Simulation
 
-This project simulates the velocities of three observers (A, B, and C) traveling through the solar system. It compares their speeds and trajectories to theoretical "virtual objects" in perfect counter-clockwise circular orbits around the Sun at their respective distances. The time dilation experienced by the 3 observers is a function of this velocities.
+This project simulates the kinematics and resulting relativistic effects of three observers (A, B, and C) traveling through the solar system. By comparing their speeds and trajectories to theoretical "virtual objects" in perfect, counter-clockwise circular orbits, this simulation models the kinematic time dilation each observer experiences.
 
-* **Observer A (Earth)** no time dilation.
-* **Observer B** time dilation corresponding with 90 km/s at take-off and gradually evolves to a time dilation corresponding with 60 km/s.
-* **Observer C** time dilation corresponding with 30 km/s at take-off and gradually evolves to a time dilation corresponding with 60 km/s.
-* After 1000 days, Observer B and C experience the same time dilation which corresponds with the fact that they keep the same distance with each other
+## The Local Inertial Frame (LIF)
+In this model, the "virtual objects" act as proxies for the local inertial frame in free fall at any given distance from the Sun. This concept is directly analogous to how the Earth-Centered Inertial (ECI) frame is used in real-world physics; for instance, the kinematic time dilation of GPS atomic clocks is calculated based on their velocity relative to the ECI.
 
-## 🪐 The Physics & Simulation Parameters
+## Kinematic Time Dilation Profiles
+Because time dilation is dependent on the observer's velocity relative to their local inertial frame, the three observers experience significantly different relativistic effects throughout their journeys:
+* **Observer A (Earth Baseline):** Remains in a perfect circular orbit, matching the velocity of the local virtual object. Consequently, Observer A experiences no relative kinematic time dilation and serves as our baseline clock.
+* **Observer B:** Departs at $t=0$ with a trajectory that creates a high initial velocity relative to the local frame (equivalent to 90 km/s). This results in a high initial rate of time dilation. As Observer B travels further from the Sun, this time dilation gradually decreases, asymptotically settling at a rate corresponding to their constant 60 km/s travel speed..
+* **Observer C:** Departs half a year later from the opposite side of the Sun. Due to Earth's orbital direction at that specific time, Observer C's initial velocity relative to the local frame is much lower (equivalent to 30 km/s), resulting in significantly less initial time dilation. Like B, C's time dilation also gradually evolves toward the 60 km/s baseline as they move out of the inner solar system.
+* **The Convergence** After approximately 1,000 days, observers B and C reach identical velocity vectors relative to the local rest frame, maintaining a fixed distance from one another and experiencing the exact same rate of time dilation.
+
+## The Physics & Simulation Parameters
 
 The simulation is set up with the following parameters:
 * **The Sun** is stationary at the origin `(x=0, y=0)`.
@@ -26,7 +31,7 @@ $$\vec{v}_{virtual} = v_{circ} \cdot \left(-\frac{y}{r}, \frac{x}{r}\right)$$
 
 At every daily time step, the script calculates the vector difference in velocity between each observer and this theoretical virtual object.
 
-## ctivate the environment
+## Activate the environment
 
 * conda env create -f environment.yml
 * conda activate triplet-experiment
@@ -37,3 +42,4 @@ python main.py
 
 This will create the file: 
 * velocity_difference_plot.png
+![Velocity Difference Plot](velocity_difference_plot.png)

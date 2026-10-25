@@ -48,7 +48,7 @@ python main_animated.py
 
 This will create the file: 
 * triplet_animation.mp4
-<video src="triplet_animation.mp4" width="100%" controls autoplay loop muted playsinline>
+<video src="[triplet_animation.mp4](https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fphotos.app.goo.gl%2F37qwDgAj4XBekf6PA&data=05%7C02%7C%7C4a428c70ab1c4dbc010208df32a2c935%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C639285346874380282%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=MM%2FmXy6r3qgI5f34kQcaHDwWlPqrHGdyR06O1BN7SM0%3D&reserved=0)" width="100%" controls autoplay loop muted playsinline>
   Your browser does not support the video tag.
 </video>
 

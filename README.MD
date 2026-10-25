@@ -49,4 +49,8 @@ python main_animated.py
 This will create the file: 
 * triplet_animation.mp4
 
-The video animation visually maps the trajectories of the three observers over a 1,000-day period. It features a dynamic spatial map demonstrating the physical vector subtraction ($\vec{v}_{relative} = \vec{v}_{observer} - \vec{v}_{LIF}$) alongside a real-time graph of the resulting clock rate differences as Observers B and C travel through the solar system.
+The video animation visually maps the trajectories of the three observers over a 1,000-day period. It features a dynamic spatial map demonstrating the physical vector subtraction 
+
+($\vec{v}_{relative} = \vec{v}_{observer} - \vec{v}_{LIF}$) 
+
+alongside a real-time graph of the resulting clock rate differences as Observers B and C travel through the solar system.

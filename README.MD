@@ -48,6 +48,9 @@ python main_animated.py
 
 This will create the file: 
 * triplet_animation.mp4
+<video src="triplet_animation.mp4" width="100%" controls autoplay loop muted playsinline>
+  Your browser does not support the video tag.
+</video>
 
 The video animation visually maps the trajectories of the three observers over a 1,000-day period. It features a dynamic spatial map demonstrating the physical vector subtraction 
 

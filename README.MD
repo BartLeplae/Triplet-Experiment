@@ -12,6 +12,14 @@ Because time dilation is dependent on the observer's velocity relative to their 
 * **Observer C:** Departs half a year later from the opposite side of the Sun. Due to Earth's orbital direction at that specific time, Observer C's initial velocity relative to the local frame is much lower (equivalent to 30 km/s), resulting in significantly less initial time dilation. Like B, C's time dilation also gradually evolves toward the 60 km/s baseline as they move out of the inner solar system.
 * **The Convergence** After approximately 1,000 days, observers B and C reach identical velocity vectors relative to the local rest frame, maintaining a fixed distance from one another and experiencing the exact same rate of time dilation.
 
+## Invariance of the Local Speed of Light ($c$)
+A fundamental premise of this model is that light propagates at speed $c$ relative to the Local Inertial Frame (the co-rotating "virtual object" at any given location). However, this does not mean that Observers B and C measure a different speed of light as they cut across these moving layers of space. Because an observer's motion relative to the Local Inertial Frame ($\vec{v}_{relative} = \vec{v}_{observer} - \vec{v}_{LIF}$) directly governs their physical measuring instruments, three interconnected relativistic effects continuously adapt to their instantaneous relative velocity:
+* **Time Dilation:** The moving observer's onboard clock ticks slower by the Lorentz factor $\gamma = (1 - v_{relative}^2/c^2)^{-1/2}$.
+* **Length Contraction:** Physical rulers and spatial intervals along the direction of relative motion contract by the same factor $\gamma$.
+* **Relativity of Simultaneity:** Onboard clocks synchronized by the observer along their travel axis naturally acquire a phase offset ($\Delta t = v_{relative} L / c^2$) relative to the local background frame.
+
+Together, these local Lorentz transformations dynamically recalibrate each observer's units of time and distance at every step of their journey. Whether an observer is co-moving with the frame like Observer A ($v_{relative} = 0$), launching "upstream" at $90\text{ km/s}$ like Observer B, or launching "downstream" at $30\text{ km/s}$ like Observer C, the physical adjustment of their clocks and rulers guarantees that all three observers always measure the local speed of light to be exactly $c$ within their own frame of reference.
+
 ## The Physics & Simulation Parameters
 
 The simulation is set up with the following parameters:

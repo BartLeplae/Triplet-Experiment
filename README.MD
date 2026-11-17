@@ -51,6 +51,33 @@ $$
 
 Where $\Phi_{sun}(R) = -\frac{G M_{sun}}{R}$. The script integrates this dynamically over the entire journey to find the exact accumulated time dilation relative to Earth ($\Delta\tau_{obs} - \Delta\tau_{Earth}$).
 
+
+## The Equatorial Thought Experiment & The ECI Frame
+To fully understand how local inertial frames govern time dilation, we can look at a classic thought experiment on Earth's equator involving two observers:
+* **Observer A (The Plane):** Flies due West along the equator at approximately 465 m/s, matching the rotational speed of the Earth so that the Sun remains perfectly overhead.
+* **Observer B (The Balloon):** Floats in a tethered balloon at the exact same altitude, simply rotating along with the Earth.
+
+To evaluate their time dilation, we must use the **Earth-Centered Inertial (ECI) frame**. The ECI is a non-rotating reference frame that moves through space alongside the Earth. In this frame, the Earth rotates beneath the coordinate system. 
+
+From the ECI perspective, the kinematic reality becomes clear: **Observer A** is completely stationary ($v_A \approx 0\text{ m/s}$), while **Observer B** in the balloon is hurtling eastward through space at $v_B \approx 465\text{ m/s}$. Because Observer A is at rest relative to the local inertial frame, A suffers no kinematic time dilation penalty. Observer B, however, is moving relative to the ECI and therefore experiences a constant time dilation penalty. After a 24-hour period, Observer A's clock will have advanced faster, leading Observer B's clock by approximately 104 nanoseconds. Time dilation is driven by speed relative to the local non-rotating inertial frame, not speed relative to the ground.
+
+## The Heliocentric Contradiction & Its Resolution
+When we shift our perspective from the regional ECI frame to the overarching Heliocentric frame, an apparent contradiction emerges regarding Observer B (the balloon):
+
+* **In the ECI Frame:** The balloon travels at a constant, static speed of 465 m/s. Its kinematic time dilation is constant.
+* **In the Heliocentric Frame:** The Earth is orbiting the Sun at $\sim 30\text{ km/s}$. As the Earth rotates, the balloon's absolute heliocentric velocity oscillates. On the midnight side, the balloon's rotational velocity adds to Earth's orbital velocity ($30\text{ km/s} + 465\text{ m/s}$). On the noon side, it subtracts ($30\text{ km/s} - 465\text{ m/s}$). 
+
+If kinematic time dilation oscillates in the heliocentric frame, how can the balloon's clock rate remain constant relative to the center of the Earth? 
+
+The resolution lies in General Relativity and the full proper time equation used in this Triplet Experiment: $\frac{d\tau}{dT} = 1 + \frac{\Phi_{sun}}{c^2} - \frac{V^2}{2c^2}$.
+
+We must account for the Sun's gravitational potential well ($\Phi_{sun}$). Because the Earth is in free fall, the ECI is a valid Local Inertial Frame. As the balloon rotates around the Earth, the kinematic and gravitational penalties perfectly counterbalance each other:
+* **At Solar Noon:** The balloon is closest to the Sun. It experiences a *weaker* kinematic penalty (slower heliocentric speed) but a *stronger* gravitational penalty (deeper in the Sun's gravity well).
+* **At Midnight:** The balloon is furthest from the Sun. It experiences a *stronger* kinematic penalty (faster heliocentric speed) but a *weaker* gravitational penalty (higher up in the Sun's gravity well).
+
+The gradient of the Sun's gravitational field across the diameter of the Earth exactly cancels out the oscillating kinematic term. Consequently, the oscillating terms vanish, completely isolating the Earth's local environment from the Sun's influence. This mathematical cancellation is why the regional ECI frame is perfectly valid for calculating local atomic clock drift without needing to constantly reference the Sun, and why our Triplet Simulation correctly requires both gravity and kinematics to resolve paradoxes across different scales.
+
+
 ## Activate the environment
 
 * `conda env create -f environment.yml`

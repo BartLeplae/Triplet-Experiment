@@ -86,6 +86,20 @@ This time oscillation is not a physical clock error; it is the exact coordinate 
 
 ![Equatorial Balloon Thought Experiment](equator_balloon.png)
 
+## Real-World Application: The GPS Satellite Network
+The exact principles modeled in this simulation—balancing kinematic and gravitational time dilation within the Earth-Centered Inertial (ECI) frame—are what allow the Global Positioning System (GPS) to function. 
+
+If we place an observer (a GPS satellite) in orbit at an altitude of ~20,200 km, we must calculate its proper time relative to observers on the surface of the Earth. In the ECI frame, two competing relativistic effects occur:
+1. **Gravitational Time Dilation:** Because the satellite is much further from Earth's center, it is higher up in Earth's gravitational well. Consequently, its atomic clocks tick *faster* than those on the ground by about **+45.9 microseconds per day**.
+2. **Kinematic Time Dilation:** The satellite orbits the Earth at a speed of about 3.9 km/s relative to the non-rotating ECI frame. This speed causes its clocks to tick *slower* than stationary ground clocks by about **-7.1 microseconds per day**.
+
+Combining these two effects yields a constant net drift: a GPS satellite's clock will naturally run **+38.6 microseconds per day faster** than a clock on Earth. Because light travels at roughly 300 meters per microsecond, a 38.6 $\mu$s error would result in a navigational position drift of over 11 kilometers in a single day!
+
+**The Engineering Resolution:** 
+To ensure that all GPS satellites have synchronized atomic clocks that do not require continuous mathematical correction in orbit, engineers apply a hardwired relativity adjustment *before launch*. A GPS atomic clock is designed to run at a base frequency of exactly 10.23 MHz on Earth. Before the satellite is put on the rocket, its oscillator is deliberately "detuned" (slowed down) to **10.22999999543 MHz**. Once the satellite reaches its operational orbit, the +38.6 $\mu$s/day relativistic speed-up perfectly compensates for this detuning, causing the orbiting clock to tick at exactly 10.23 MHz relative to receivers on the ground.
+
+**Why the Sun Doesn't Break the GPS Network:**
+As proven by our Equatorial Balloon experiment, the GPS network does not need to constantly adjust for the Earth's 30 km/s orbit around the Sun. Even though a GPS satellite's absolute heliocentric velocity oscillates massively as it orbits the Earth, the Earth is in free fall. The gradient of the Sun's gravity across the satellite's orbit perfectly cancels out the heliocentric kinematic oscillations (resulting in the Relativity of Simultaneity phase shift). This perfectly shields the local ECI frame, allowing GPS satellites to stay synchronized using only Earth's local gravity and velocity parameters.
 ## Activate the environment
 
 * `conda env create -f environment.yml`

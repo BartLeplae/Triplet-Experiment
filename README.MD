@@ -69,14 +69,22 @@ When we shift our perspective from the regional ECI frame to the overarching Hel
 
 If kinematic time dilation oscillates in the heliocentric frame, how can the balloon's clock rate remain constant relative to the center of the Earth? 
 
-The resolution lies in General Relativity and the full proper time equation used in this Triplet Experiment: $\frac{d\tau}{dT} = 1 + \frac{\Phi_{sun}}{c^2} - \frac{V^2}{2c^2}$.
+The resolution lies in General Relativity and the full proper time equation: $\frac{d\tau}{dT} = 1 + \frac{\Phi_{sun}}{c^2} - \frac{V^2}{2c^2}$.
 
-We must account for the Sun's gravitational potential well ($\Phi_{sun}$). Because the Earth is in free fall, the ECI is a valid Local Inertial Frame. As the balloon rotates around the Earth, the kinematic and gravitational penalties perfectly counterbalance each other:
+First, we must account for the Sun's gravitational potential well ($\Phi_{sun}$). As the balloon rotates around the Earth, the kinematic and gravitational penalties perfectly counterbalance each other:
 * **At Solar Noon:** The balloon is closest to the Sun. It experiences a *weaker* kinematic penalty (slower heliocentric speed) but a *stronger* gravitational penalty (deeper in the Sun's gravity well).
 * **At Midnight:** The balloon is furthest from the Sun. It experiences a *stronger* kinematic penalty (faster heliocentric speed) but a *weaker* gravitational penalty (higher up in the Sun's gravity well).
 
-The gradient of the Sun's gravitational field across the diameter of the Earth exactly cancels out the oscillating kinematic term. Consequently, the oscillating terms vanish, completely isolating the Earth's local environment from the Sun's influence. This mathematical cancellation is why the regional ECI frame is perfectly valid for calculating local atomic clock drift without needing to constantly reference the Sun, and why our Triplet Simulation correctly requires both gravity and kinematics to resolve paradoxes across different scales.
+### The Relativity of Simultaneity & Position Integrity
+While the gradient of the Sun's gravity cancels out the *average* drift, the mathematical integral of these forces still leaves a massive daily oscillation of $\pm 2.1\text{ }\mu\text{s}$ in the accumulated proper time. 
 
+Why doesn't this $2.1\text{ }\mu\text{s}$ time fluctuation result in a physical position difference (a spatial displacement) for the balloon? 
+
+This oscillation is the exact manifestation of the **Relativity of Simultaneity** phase shift ($\frac{vx}{c^2}$) from the Lorentz transformation. With Earth's orbital velocity ($v \approx 30,000\text{ m/s}$) and radius ($x \approx 6,378,000\text{ m}$), the phase shift is exactly $\frac{(30,000)(6,378,000)}{c^2} \approx 2.1\text{ }\mu\text{s}$. 
+
+This time oscillation is not a physical clock error; it is the exact coordinate offset required by spacetime geometry to guarantee that the physical spatial position of the balloon remains perfectly consistent whether viewed from the rotating ECI frame or the overarching Heliocentric frame.
+
+![Equatorial Balloon Thought Experiment](equator_balloon.png)
 
 ## Activate the environment
 
@@ -112,3 +120,9 @@ Run the animation generator:
 python main_animated_60_60.py
 ```
 *Outputs: `triplet_heliocentric_animation_60_60.mp4`*
+
+Run the equatorial balloon (The Mirror Effect):
+```bash
+python equator_balloon_mirror.py
+```
+*Outputs: `equator_balloon.png`*

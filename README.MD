@@ -100,6 +100,45 @@ To ensure that all GPS satellites have synchronized atomic clocks that do not re
 
 **Why the Sun Doesn't Break the GPS Network:**
 As proven by our Equatorial Balloon experiment, the GPS network does not need to constantly adjust for the Earth's 30 km/s orbit around the Sun. Even though a GPS satellite's absolute heliocentric velocity oscillates massively as it orbits the Earth, the Earth is in free fall. The gradient of the Sun's gravity across the satellite's orbit perfectly cancels out the heliocentric kinematic oscillations (resulting in the Relativity of Simultaneity phase shift). This perfectly shields the local ECI frame, allowing GPS satellites to stay synchronized using only Earth's local gravity and velocity parameters.
+
+## The Michelson-Morley Experiment & Frame Invariance
+The principles of free-fall and local inertial frames explored in this simulation also provide the mechanical explanation for the famous Michelson-Morley experiment. Historically, this experiment attempted to measure Earth's 30 km/s orbital velocity through space but returned a null result. 
+
+**The Earth-Centered Inertial Perspective**
+Because the Earth is in free-fall around the Sun, the Earth-Centered Inertial (ECI) frame acts as a pristine Local Inertial Frame (LIF). Within this local gravitational pocket, the speed of light $c$ is perfectly isotropic. Thus, from the ECI perspective, light traveling along the two equal arms of the interferometer ($L_0$) takes exactly the same time ($t = \frac{2L_0}{c}$) to return, yielding no fringe shift.
+
+**The Heliocentric Perspective**
+How does this exact same event look from the overarching Heliocentric frame, where the Earth and the interferometer are hurtling through space at 30 km/s? The speed of light is still $c$ relative to the solar system, meaning the light pulses must "chase" the moving mirrors.
+
+* **The Transverse Arm (Perpendicular to Earth's Orbit):** The light must travel along a diagonal path to strike the moving mirror, forming a triangle. Because the path is longer, the Heliocentric coordinate time required for the round trip is $T_{\perp} = \gamma \frac{2L_0}{c}$ (where $\gamma$ is the Lorentz factor).
+* **The Longitudinal Arm (Parallel to Earth's Orbit):** The light chases the mirror at closing speeds of $c-v$ (outbound) and $c+v$ (return). If the arm length remained $L_0$, this round trip would take $T_{\parallel} = \gamma^2 \frac{2L_0}{c}$, which is longer than the transverse arm and would cause a visible fringe shift. However, because this arm is aligned with the vector of motion, **length contraction** occurs. The physical length is shortened to $L = \frac{L_0}{\gamma}$. 
+
+When the chase math is recalculated with this contracted length, the longitudinal coordinate time drops to exactly $T_{\parallel} = \gamma \frac{2L_0}{c}$. 
+
+Because $T_{\perp} = T_{\parallel}$, both light waves return to the beam splitter simultaneously in the Heliocentric frame as well. Just as the Relativity of Simultaneity perfectly counterbalances the proper time oscillation in our balloon simulation, length contraction acts as the perfect geometric counterweight here. It guarantees that the physical outcome—a null interference pattern—remains mathematically flawless and invariant whether modeled in the local ECI frame or the overarching Heliocentric frame.
+
+## The Michelson-Gale Experiment & The Sagnac Effect
+While the Michelson-Morley experiment yielded a null result for Earth's *translational* motion (the 30 km/s orbit), the **Michelson-Gale-Pearson experiment (1925)** successfully detected Earth's *rotational* motion using a massive, rectangular ring interferometer. This experiment demonstrates the Sagnac effect and proves that the true local inertial frame is the non-rotating ECI, not the spinning surface of the Earth.
+
+**The ECI Perspective (The Moving Mirrors)**
+In the non-rotating Earth-Centered Inertial (ECI) frame, the Earth is spinning. Therefore, the mirrors forming the corners of the Michelson-Gale interferometer are in physical motion, traveling eastward. 
+When a beam of light is split and sent in opposite directions around the ring:
+* **The Co-Rotating Beam (Eastward):** Must "chase" the mirrors as they constantly move away from it. This increases the total distance the light must cover, resulting in a longer transit time.
+* **The Counter-Rotating Beam (Westward):** Travels toward the approaching mirrors. The mirrors rush to meet the light, decreasing the total distance and resulting in a shorter transit time.
+
+Because the two beams take different amounts of time to complete the loop, they arrive out of phase, creating a visible interference fringe shift. This shift mathematically confirms Earth's rotation relative to the local inertial space.
+
+**The Heliocentric Perspective (Translational Cancellation)**
+How does this same event look from the overarching Heliocentric frame? The mirrors are no longer just rotating at a few hundred meters per second; they are hurtling through the solar system at Earth's orbital speed of 30 km/s. Shouldn't this massive translational speed overwhelm the tiny rotational speed when the light is chasing the mirrors?
+
+The answer is no, due to the closed-loop geometry of the experiment. 
+* In the Heliocentric frame, the light beam traveling "downstream" with Earth's orbit indeed has to chase the mirrors at a closing speed of $c - v$, losing a massive amount of time. 
+* However, once the light rounds the far corner and travels "upstream" against Earth's orbit, the mirrors rush to meet it at $c + v$. 
+
+When you apply the strict rules of Special Relativity—including the **length contraction** of the physical pipes aligned with the orbital vector—the time lost chasing the mirrors downstream is perfectly recovered on the upstream return trip. The 30 km/s translational vector completely cancels itself out over a closed loop. 
+
+The only geometric difference that survives the round trip is the rotational velocity (specifically, the fact that the southern mirrors of the rectangle move slightly faster than the northern mirrors due to Earth's curvature). Consequently, the Heliocentric observer calculates the exact same time difference as the ECI observer. The 30 km/s orbital drift remains entirely undetectable, while the rotation creates the exact fringe shift measured by Michelson and Gale.
+
 ## Activate the environment
 
 * `conda env create -f environment.yml`

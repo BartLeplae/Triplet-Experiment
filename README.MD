@@ -71,18 +71,20 @@ If kinematic time dilation oscillates in the heliocentric frame, how can the bal
 
 The resolution lies in General Relativity and the full proper time equation: $\frac{d\tau}{dT} = 1 + \frac{\Phi_{sun}}{c^2} - \frac{V^2}{2c^2}$.
 
-First, we must account for the Sun's gravitational potential well ($\Phi_{sun}$). As the balloon rotates around the Earth, the kinematic and gravitational penalties perfectly counterbalance each other:
-* **At Solar Noon:** The balloon is closest to the Sun. It experiences a *weaker* kinematic penalty (slower heliocentric speed) but a *stronger* gravitational penalty (deeper in the Sun's gravity well).
-* **At Midnight:** The balloon is furthest from the Sun. It experiences a *stronger* kinematic penalty (faster heliocentric speed) but a *weaker* gravitational penalty (higher up in the Sun's gravity well).
+Expanding the squared heliocentric speed $V^2 = (\vec{v}_{Earth} + \vec{v}_{rot})^2$ reveals a kinematic cross-term, $-\frac{\vec{v}_{Earth} \cdot \vec{v}_{rot}}{c^2}$, which oscillates between Solar Noon and Midnight:
+* **At Solar Noon:** The balloon moves opposite to Earth's orbital motion ($V \approx 30\text{ km/s} - 465\text{ m/s}$), temporarily reducing its kinematic penalty relative to Earth's center.
+* **At Midnight:** The balloon moves in the same direction as Earth's orbit ($V \approx 30\text{ km/s} + 465\text{ m/s}$), temporarily increasing its kinematic penalty.
+
+Over a full 24-hour rotation, this cross-term naturally averages to zero ($\oint \cos\theta\,d\theta = 0$). Meanwhile, although the direct difference in the Sun's gravitational potential $\Phi_{sun}$ across Earth's radius is tiny (an amplitude of only $\sim 5.9\text{ ns}$), the **gradient** of $\Phi_{sun}$ matches Earth's exact orbital acceleration ($\vec{a}_{Earth} = -\nabla\Phi_{sun}$). By Einstein's Equivalence Principle, this free-fall acceleration cancels the Sun's gravitational pull inside the local ECI frame.
 
 ### The Relativity of Simultaneity & Position Integrity
-While the gradient of the Sun's gravity cancels out the *average* drift, the mathematical integral of these forces still leaves a massive daily oscillation of $\pm 2.1\text{ }\mu\text{s}$ in the accumulated proper time. 
+While the daily oscillation averages out over a full rotation, integrating the kinematic cross-term $-\frac{\vec{v}_{Earth} \cdot \vec{v}_{rot}}{c^2}$ over time leaves a periodic daily swing of $\pm 2.1\text{ }\mu\text{s}$ in the heliocentric coordinate time comparison. 
 
 Why doesn't this $2.1\text{ }\mu\text{s}$ time fluctuation result in a physical position difference (a spatial displacement) for the balloon? 
 
 This oscillation is the exact manifestation of the **Relativity of Simultaneity** phase shift ($\frac{vx}{c^2}$) from the Lorentz transformation. With Earth's orbital velocity ($v \approx 30,000\text{ m/s}$) and radius ($x \approx 6,378,000\text{ m}$), the phase shift is exactly $\frac{(30,000)(6,378,000)}{c^2} \approx 2.1\text{ }\mu\text{s}$. 
 
-This time oscillation is not a physical clock error; it is the exact coordinate offset required by spacetime geometry to guarantee that the physical spatial position of the balloon remains perfectly consistent whether viewed from the rotating ECI frame or the overarching Heliocentric frame.
+This time oscillation is not a physical clock error; it is the exact coordinate offset required by spacetime geometry to guarantee that the physical spatial position of the balloon remains perfectly consistent whether viewed from the non-rotating ECI frame or the overarching Heliocentric frame.
 
 ![Equatorial Balloon Thought Experiment](equator_balloon.png)
 
@@ -105,7 +107,7 @@ As proven by our Equatorial Balloon experiment, the GPS network does not need to
 The principles of free-fall and local inertial frames explored in this simulation also provide the mechanical explanation for the famous Michelson-Morley experiment. Historically, this experiment attempted to measure Earth's 30 km/s orbital velocity through space but returned a null result. 
 
 **The Earth-Centered Inertial Perspective**
-Because the Earth is in free-fall around the Sun, the Earth-Centered Inertial (ECI) frame acts as a pristine Local Inertial Frame (LIF). Within this local gravitational pocket, the speed of light $c$ is perfectly isotropic. Thus, from the ECI perspective, light traveling along the two equal arms of the interferometer ($L_0$) takes exactly the same time ($t = \frac{2L_0}{c}$) to return, yielding no fringe shift.
+Because the Earth is in free-fall around the Sun, the Earth-Centered Inertial (ECI) frame acts as a pristine non-rotating local inertial frame. Within this local gravitational pocket, the speed of light $c$ is perfectly isotropic. Thus, from the ECI perspective, light traveling along the two equal arms of the interferometer ($L_0$) takes exactly the same time ($t = \frac{2L_0}{c}$) to return, yielding no fringe shift.
 
 **The Heliocentric Perspective**
 How does this exact same event look from the overarching Heliocentric frame, where the Earth and the interferometer are hurtling through space at 30 km/s? The speed of light is still $c$ relative to the solar system, meaning the light pulses must "chase" the moving mirrors.

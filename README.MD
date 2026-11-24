@@ -134,7 +134,15 @@ The resolution lies in General Relativity and the full proper time equation:
 
 $\frac{d\tau}{dT} = 1 + \frac{\Phi_{sun}}{c^2} - \frac{V^2}{2c^2}$.
 
-Expanding the squared heliocentric speed $V^2 = (\vec{v}_{Earth} + \vec{v}_{rot})^2$ reveals a kinematic cross-term, $-\frac{\vec{v}_{Earth} \cdot \vec{v}_{rot}}{c^2}$, which oscillates between Solar Noon and Midnight:
+Expanding the squared heliocentric speed 
+
+$V^2 = (\vec{v}_{Earth} + \vec{v}_{rot})^2$ 
+
+reveals a kinematic cross-term, 
+
+$-\frac{\vec{v}_{Earth} \cdot \vec{v}_{rot}}{c^2}$, 
+
+which oscillates between Solar Noon and Midnight:
 
 * **At Solar Noon:** The balloon moves opposite to Earth's orbital motion ($V \approx 30\text{ km/s} - 465\text{ m/s}$), temporarily reducing its kinematic penalty relative to Earth's center.
 
@@ -144,7 +152,11 @@ Over a full 24-hour rotation, this cross-term naturally averages to zero ($\oint
 
 ### The Relativity of Simultaneity & Position Integrity
 
-While the daily oscillation averages out over a full rotation, integrating the kinematic cross-term $-\frac{\vec{v}_{Earth} \cdot \vec{v}_{rot}}{c^2}$ over time leaves a periodic daily swing of $\pm 2.1\ \mu\text{s}$ in the heliocentric coordinate time comparison.
+While the daily oscillation averages out over a full rotation, integrating the kinematic cross-term 
+
+$-\frac{\vec{v}_{Earth} \cdot \vec{v}_{rot}}{c^2}$ 
+
+over time leaves a periodic daily swing of $\pm 2.1\ \mu\text{s}$ in the heliocentric coordinate time comparison.
 
 Why doesn't this $2.1\ \mu\text{s}$ time fluctuation result in a physical position difference (a spatial displacement) for the balloon?
 
@@ -269,6 +281,7 @@ At any single instant, the non-rotating Earth-Centered Inertial (ECI) frame acts
 Crucially, stellar aberration demonstrates that while the *direction* of incoming light shifts between frames, the **speed of light** $c$ **remains strictly constant** in both the Heliocentric and ECI frames:
 
 * **Breaking Galilean Velocity Addition:** In classical mechanics, combining vertical starlight ($c$) with Earth's horizontal motion ($v$) would yield a relative light speed inside the telescope of $\sqrt{c^2 + v^2} > c$ (or seasonal variations between $c - v$ and $c + v$ for stars lying in Earth's orbital plane). Under a Lorentz transformation, however, the boost tilts the photon's velocity components without changing its magnitude:
+
 
   $$
   \vert{}\vec{c}_{\text{ECI}}\vert{} = \sqrt{(c\sin\alpha)^2 + (c\cos\alpha)^2} = c

@@ -2,6 +2,8 @@
 
 This project simulates the kinematics and resulting relativistic effects of three observers (A, B, and C) traveling through the solar system. Moving beyond classical relative velocity comparisons, this simulation resolves the "Twin Paradox" by integrating the proper time ($\tau$) of each observer relative to a single, overarching reference frame: the solar system's heliocentric coordinate time ($T$).
 
+> **Key Question:** *If two travelers launch from Earth with identical relative velocities and accelerations—one six months after the other—why do their atomic clocks diverge dramatically, and how can one of them actually age **faster** than the observer who stayed on Earth?*
+
 ## Table of Contents
 * [The Classic Twin Paradox Perception](#the-classic-twin-paradox-perception)
 * [The Heliocentric Frame & Proper Time Integration](#the-heliocentric-frame--proper-time-integration)
@@ -22,7 +24,29 @@ This project simulates the kinematics and resulting relativistic effects of thre
 ## The Classic Twin Paradox Perception
 In the standard textbook formulation of the "Twin Paradox," time dilation is usually framed purely in terms of the velocity relative to Earth. To resolve the paradox, explaining why the traveling twin ages less rather than the other way around, the classic explanation relies on acceleration. We are taught that because only the traveling twin undergoes acceleration (departing, turning around, and stopping), the symmetry between the two observers is broken.
 
-While this heuristic works for simple scenarios, it masks the true mechanics of relativity when launching from a platform that is already moving, such as the Earth orbiting the Sun. This simulation replaces the twin scenario with a Triplet Experiment to demonstrate why the classic focus on relative velocity and acceleration is incomplete.
+While this heuristic works for simple scenarios, it masks the true mechanics of relativity when launching from a platform that is already moving, such as the Earth orbiting the Sun. This simulation replaces the twin scenario with a Triplet Experiment to demonstrate why the classic focus on relative velocity and acceleration is incomplete—and why **cumulative time dilation must always be calculated by integrating proper time along each observer's worldline within an overarching inertial frame** (such as the non-rotating Heliocentric frame across the solar system, or locally the non-rotating ECI frame near Earth).
+
+## Einstein's Train and Embankment vs. The Triplet Experiment
+A frequent source of confusion in relativity comes from applying the intuition of Einstein's famous **Train and Embankment (platform)** thought experiment directly to orbital launch scenarios like the Triplet Experiment. Although both thought experiments challenge classical Newtonian time, they illustrate fundamentally different relativistic mechanisms:
+
+1. **Uniform Straight-Line Frames vs. A Curved, Accelerating Launch Platform**
+   * **Einstein's Train & Embankment:** Both the embankment and the train move at constant velocities along straight lines in flat Minkowski spacetime. Neither frame accelerates, making them completely symmetric inertial frames.
+   * **The Triplet Experiment:** Earth (Observer A) is not an infinite straight-line embankment—it follows a curved free-fall orbit around the Sun, reversing its velocity vector from $+30\text{ km/s}$ to $-30\text{ km/s}$ every six months. Earth therefore provides only a sequence of instantaneous, local inertial frames (ECI), not a single global inertial frame valid across interplanetary distances.
+
+2. **Relativity of Simultaneity ($\Delta t = vx/c^2$) vs. Accumulated Proper Time ($\Delta\tau$)**
+   * **Einstein's Train & Embankment:** Einstein uses two spatially separated lightning strikes ($\Delta x \neq 0$) at the front and rear of the train to prove that observers in relative motion disagree on *whether distant events happen at the same coordinate time*. This is a coordinate synchronization effect across space, not a comparison of total elapsed clock time along a journey.
+   * **The Triplet Experiment:** Rather than asking whether distant events are simultaneous, this simulation integrates the physical proper time accumulated along each observer's actual trajectory through the Sun's gravitational well[cite: 44]:
+     $$\frac{d\tau}{dT} = 1 + \frac{\Phi_{sun}(R(T))}{c^2} - \frac{V(T)^2}{2c^2}$$
+
+3. **Complete Velocity Symmetry vs. Gravitational Potential & Orbital Asymmetry**
+   * **Einstein's Train & Embankment:** In gravity-free flat spacetime, the embankment and the train are completely interchangeable; only their relative velocity matters, and swapping who is "moving" changes nothing physically.
+   * **The Triplet Experiment:** In the solar system, the Sun's gravitational potential $\Phi_{sun}(R)$ and the non-rotating Heliocentric frame break that symmetry[cite: 44]. Launching at the exact same $60\text{ km/s}$ relative to Earth (Scenario 2) results in two completely different heliocentric speeds—$30\text{ km/s}$ downstream (Observer B) versus $90\text{ km/s}$ upstream (Observer C)—producing genuinely different proper time rates[cite: 44].
+
+**Why Relative Velocity Alone Is Misleading**
+This contrast explains the common misconception that two observers share a symmetric relative speed and should therefore experience identical time dilation. Reciprocal time dilation applies only to instantaneous coordinate comparisons between uniform, straight-line inertial frames separated in space ($\Delta x \neq 0$). Whenever observers follow curved trajectories, change velocity, or move through a gravitational field, relative velocity between the travelers is insufficient: **to determine cumulative time dilation, one must always integrate proper time ($\int d\tau$) along each observer's worldline within an overarching inertial frame—such as the non-rotating Heliocentric frame for interplanetary journeys, or locally the non-rotating ECI frame in Earth's vicinity.**
+
+**Where Einstein's Train Effect *Does* Appear in This Project**
+Einstein's Train-and-Embankment synchronization shift ($\Delta t = \frac{vx}{c^2}$) still plays a vital role here—specifically in the **Equatorial Balloon Thought Experiment** below[cite: 44]. Because Earth orbits the Sun at $v \approx 30\text{ km/s}$ like a moving train, comparing clocks across Earth's radius ($x \approx 6,378\text{ km}$) between the local ECI frame and the overarching Heliocentric frame introduces the exact daily simultaneity swing of $\pm 2.1\ \mu\text{s}$[cite: 44].
 
 ## The Heliocentric Frame & Proper Time Integration
 Instead of calculating time dilation purely based on relative velocities between the observers (which ignores the non-inertial nature of Earth as a launch platform), this model evaluates each observer's exact trajectory through the Sun's gravitational well. 

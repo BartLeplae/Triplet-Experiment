@@ -130,7 +130,9 @@ When we shift our perspective from the regional ECI frame to the overarching Hel
 
 If kinematic time dilation oscillates in the heliocentric frame, how can the balloon's clock rate remain constant relative to the center of the Earth?
 
-The resolution lies in General Relativity and the full proper time equation: $\frac{d\tau}{dT} = 1 + \frac{\Phi_{sun}}{c^2} - \frac{V^2}{2c^2}$.
+The resolution lies in General Relativity and the full proper time equation: 
+
+$\frac{d\tau}{dT} = 1 + \frac{\Phi_{sun}}{c^2} - \frac{V^2}{2c^2}$.
 
 Expanding the squared heliocentric speed $V^2 = (\vec{v}_{Earth} + \vec{v}_{rot})^2$ reveals a kinematic cross-term, $-\frac{\vec{v}_{Earth} \cdot \vec{v}_{rot}}{c^2}$, which oscillates between Solar Noon and Midnight:
 

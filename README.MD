@@ -134,7 +134,7 @@ The resolution lies in General Relativity and the full proper time equation:
 
 $$
 \frac{d\tau}{dT} = 1 + \frac{\Phi_{sun}}{c^2} - \frac{V^2}{2c^2}
-$$.
+$$
 
 Expanding the squared heliocentric speed 
 
@@ -146,7 +146,7 @@ reveals a kinematic cross-term,
 
 $$
 -\frac{\vec{v}_{Earth} \cdot \vec{v}_{rot}}{c^2}
-$$, 
+$$
 
 which oscillates between Solar Noon and Midnight:
 

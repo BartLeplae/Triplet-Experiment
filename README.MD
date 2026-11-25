@@ -172,6 +172,8 @@ This oscillation is the exact manifestation of the **Relativity of Simultaneity*
 
 This time oscillation is not a physical clock error; it is the exact coordinate offset required by spacetime geometry to guarantee that the physical spatial position of the balloon remains perfectly consistent whether viewed from the non-rotating ECI frame or the overarching Heliocentric frame.
 
+![Balloon Experiment](equator_balloon.png)
+
 ### Daily Fly-Bys & Instantaneous Clock Perception (Einstein's Train Analogy)
 Because Observer A (the plane) remains stationary in the non-rotating ECI frame while Observer B (the balloon) completes one full circle around Earth's equator every sidereal day ($T \approx 23\text{ h } 56\text{ min}$), the two observers pass right next to each other ($\Delta\vec{x} = 0$) once every ~24 hours. At each direct fly-by, they can compare clocks locally with zero light-travel delay and confirm that the plane's clock has gained another $\approx 104\text{ ns}$.
 

@@ -12,11 +12,7 @@ This project simulates the kinematics and resulting relativistic effects of thre
 
 * [Resolving the Twin Paradox: The Scenarios](#resolving-the-twin-paradox-the-scenarios)
 
-* [The Physics & Simulation Parameters](#the-physics--simulation-parameters)
-
 * [The Equatorial Thought Experiment & The ECI Frame](#the-equatorial-thought-experiment--the-eci-frame)
-
-* [The Heliocentric Contradiction & Its Resolution](#the-heliocentric-contradiction--its-resolution)
 
 * [Real-World Application: The GPS Satellite Network](#real-world-application-the-gps-satellite-network)
 
@@ -88,7 +84,7 @@ To compare both scenarios directly in spacetime, the figure below plots the 2D h
 
 * **Scenario 2 (Bottom Panel — $60/60\text{ km/s}$ relative launches):** Observer B's downstream launch produces a shallow slope ($v_{\text{helio}} = 30\text{ km/s}$, matching Earth's orbital speed), allowing B to age *faster* than Earth ($\Delta\tau_B - \Delta\tau_A = +186.4\text{ ms}$ at $T = 2.0\text{ yr}$), whereas Observer C's upstream launch yields a steep slope ($v_{\text{helio}} = 90\text{ km/s}$) and a cumulative lag of $\Delta\tau_C - \Delta\tau_A = -1495.4\text{ ms}$.
 
-## The Physics & Simulation Parameters
+### The Physics & Simulation Parameters
 
 The simulation is set up with the following parameters:
 
@@ -120,7 +116,7 @@ To evaluate their time dilation, we must use the **Earth-Centered Inertial (ECI)
 
 From the ECI perspective, the kinematic reality becomes clear: **Observer A** is completely stationary ($v_A \approx 0\text{ m/s}$), while **Observer B** in the balloon is hurtling eastward through space at $v_B \approx 465\text{ m/s}$. Because Observer A is at rest relative to the local inertial frame, A suffers no kinematic time dilation penalty. Observer B, however, is moving relative to the ECI and therefore experiences a constant time dilation penalty. After a 24-hour period, Observer A's clock will have advanced faster, leading Observer B's clock by approximately $104\text{ nanoseconds}$. Time dilation is driven by speed relative to the local non-rotating inertial frame, not speed relative to the ground.
 
-## The Heliocentric Contradiction & Its Resolution
+### The Heliocentric Contradiction & Its Resolution
 
 When we shift our perspective from the regional ECI frame to the overarching Heliocentric frame, an apparent contradiction emerges regarding Observer B (the balloon):
 

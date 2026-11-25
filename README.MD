@@ -172,6 +172,26 @@ This oscillation is the exact manifestation of the **Relativity of Simultaneity*
 
 This time oscillation is not a physical clock error; it is the exact coordinate offset required by spacetime geometry to guarantee that the physical spatial position of the balloon remains perfectly consistent whether viewed from the non-rotating ECI frame or the overarching Heliocentric frame.
 
+### Daily Fly-Bys & Instantaneous Clock Perception (Einstein's Train Analogy)
+Because Observer A (the plane) remains stationary in the non-rotating ECI frame while Observer B (the balloon) completes one full circle around Earth's equator every sidereal day ($T \approx 23\text{ h } 56\text{ min}$), the two observers pass right next to each other ($\Delta\vec{x} = 0$) once every ~24 hours. At each direct fly-by, they can compare clocks locally with zero light-travel delay and confirm that the plane's clock has gained another $\approx 104\text{ ns}$.
+
+What do the two observers perceive about each other's *instantaneous* clock rate when they cross paths?
+
+* **Optical Signals (First-Order Doppler Shift):** While approaching each other before the pass, *both* observers see each other's clock signals **blueshifted** (ticking faster by $\approx 1 + v/c \approx 1 + 1.55 \times 10^{-6}$). After passing and receding, *both* see each other's signals **redshifted** (ticking slower by $\approx 1 - v/c$).
+* **At the Exact Moment of Passing (Einstein's Train & Embankment):** At the split second of closest approach—where the first-order Doppler shift vanishes—their relative speed is $v_{\text{rel}} \approx 465\text{ m/s}$. Within each observer's *instantaneously co-moving tangent inertial frame* (analogous to Einstein's uniformly moving train passing a straight embankment), **each measures the other's clock to tick slower** at that instant by the transverse Doppler factor $-\frac{v_{\text{rel}}^2}{2c^2} \approx -1.20 \times 10^{-12}$.
+
+**Reconciling Instantaneous Symmetry with the $+104\text{ ns/day}$ Gain:**
+This split-second symmetry does not contradict the plane's $+104\text{ ns}$ lead at the next reunion because only Observer A stays in a *single* inertial frame:
+
+1. **Observer A (Plane):** Remains in the single non-rotating ECI frame all day, so B's $-\frac{v^2}{2c^2}$ rate penalty integrates steadily to $-104\text{ ns}$ ($+104\text{ ns}$ lead for A).
+2. **Observer B (Balloon):** Moves along a circle and continuously switches from one instantaneous tangent inertial frame to the next. As B's direction rotates, its hyperplane of simultaneity ($\Delta t = \frac{\vec{v}_B \cdot d\vec{l}}{c^2}$) continuously tilts forward around the equator. Integrating this simultaneity shift around Earth's closed circumference ($2\pi R_E$) introduces a **Sagnac simultaneity jump**:
+
+$$
+\Delta t_{\text{Sagnac}} = \oint \frac{\vec{v}_B \cdot d\vec{l}}{c^2} = \frac{v_B (2\pi R_E)}{c^2} = \frac{v_B^2 T}{c^2} \approx +208\text{ ns/day}
+$$
+
+Combining the naive tangent-frame time dilation ($-104\text{ ns}$) with this $+208\text{ ns}$ closed-loop simultaneity shift yields $-104\text{ ns} + 208\text{ ns} = +104\text{ ns}$, confirming from B's own perspective why A's clock is ahead at every daily pass.
+
 ## Real-World Application: The GPS Satellite Network
 
 The exact principles modeled in this simulation—balancing kinematic and gravitational time dilation within the Earth-Centered Inertial (ECI) frame—are what allow the Global Positioning System (GPS) to function.

@@ -124,7 +124,19 @@ $$
 \frac{d\tau}{dT} = 1 + \frac{\Phi_{\text{sun}}}{c^2} - \frac{V^2}{2c^2}
 $$
 
-Expanding the squared heliocentric speed $V^2 = (\vec{v}_{\text{Earth}} + \vec{v}_{\text{rot}})^2$ reveals a kinematic cross-term, $-\frac{\vec{v}_{\text{Earth}} \cdot \vec{v}_{\text{rot}}}{c^2}$, which oscillates between Solar Noon and Midnight:
+Expanding the squared heliocentric speed 
+
+$$
+V^2 = (\vec{v}_{\text{Earth}} + \vec{v}_{\text{rot}})^2
+$$ 
+
+reveals a kinematic cross-term, 
+
+$$
+-\frac{\vec{v}_{\text{Earth}} \cdot \vec{v}_{\text{rot}}}{c^2}
+$$
+
+which oscillates between Solar Noon and Midnight:
 
 * **At Solar Noon:** The balloon moves opposite to Earth's orbital motion ($V \approx 30\text{ km/s} - 465\text{ m/s}$), temporarily reducing its kinematic penalty relative to Earth's center.
 * **At Midnight:** The balloon moves in the same direction as Earth's orbit ($V \approx 30\text{ km/s} + 465\text{ m/s}$), temporarily increasing its kinematic penalty.

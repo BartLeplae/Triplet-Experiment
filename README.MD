@@ -141,7 +141,11 @@ which oscillates between Solar Noon and Midnight:
 * **At Solar Noon:** The balloon moves opposite to Earth's orbital motion ($V \approx 30\text{ km/s} - 465\text{ m/s}$), temporarily reducing its kinematic penalty relative to Earth's center.
 * **At Midnight:** The balloon moves in the same direction as Earth's orbit ($V \approx 30\text{ km/s} + 465\text{ m/s}$), temporarily increasing its kinematic penalty.
 
-Over a full 24-hour rotation, this cross-term naturally averages to zero ($\oint \cos\theta\,d\theta = 0$). Meanwhile, although the direct difference in the Sun's gravitational potential $\Phi_{\text{sun}}$ across Earth's radius is tiny (an amplitude of only $\sim 5.9\text{ ns}$), the **gradient** of $\Phi_{\text{sun}}$ matches Earth's exact orbital acceleration ($\vec{a}_{\text{Earth}} = -\nabla\Phi_{\text{sun}}$). By Einstein's Equivalence Principle, this free-fall acceleration cancels the Sun's gravitational pull inside the local ECI frame.
+Over a full 24-hour rotation, this cross-term naturally averages to zero ($\oint \cos\theta\,d\theta = 0$). Meanwhile, although the direct difference in the Sun's gravitational potential $\Phi_{\text{sun}}$ across Earth's radius is tiny (an amplitude of only $\sim 5.9\text{ ns}$), the **gradient** of $\Phi_{\text{sun}}$ matches Earth's exact orbital acceleration 
+
+$$\vec{a}_{\text{Earth}} = -\nabla\Phi_{\text{sun}}$$
+
+By Einstein's Equivalence Principle, this free-fall acceleration cancels the Sun's gravitational pull inside the local ECI frame.
 
 ### 4.2 The Relativity of Simultaneity & Position Integrity
 

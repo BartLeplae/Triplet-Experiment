@@ -145,7 +145,11 @@ Over a full 24-hour rotation, this cross-term naturally averages to zero ($\oint
 
 ### 4.2 The Relativity of Simultaneity & Position Integrity
 
-While the daily oscillation averages out over a full rotation, integrating the kinematic cross-term $-\frac{\vec{v}_{\text{Earth}} \cdot \vec{v}_{\text{rot}}}{c^2}$ over time leaves a periodic daily swing of $\pm 2.1\ \mu\text{s}$ in the heliocentric coordinate time comparison.
+While the daily oscillation averages out over a full rotation, integrating the kinematic cross-term 
+
+$$-\frac{\vec{v}_{\text{Earth}} \cdot \vec{v}_{\text{rot}}}{c^2}$$ 
+
+over time leaves a periodic daily swing of $\pm 2.1\ \mu\text{s}$ in the heliocentric coordinate time comparison.
 
 Why doesn't this $2.1\ \mu\text{s}$ time fluctuation result in a physical position difference (a spatial displacement) for the balloon?
 
@@ -285,9 +289,9 @@ Crucially, stellar aberration demonstrates that while the *direction* of incomin
 
 * **Breaking Galilean Velocity Addition:** In classical mechanics, combining vertical starlight ($c$) with Earth's horizontal motion ($v$) would yield a relative light speed inside the telescope of $\sqrt{c^2 + v^2} > c$ (or seasonal variations between $c - v$ and $c + v$ for stars lying in Earth's orbital plane). Under a Lorentz transformation, however, the boost tilts the photon's velocity components without changing its magnitude:
 
-  $$
-  \lvert\vec{c}_{\text{ECI}}\rvert = \sqrt{(c\sin\alpha)^2 + (c\cos\alpha)^2} = c
-  $$
+$$
+\lvert\vec{c}_{\text{ECI}}\rvert = \sqrt{(c\sin\alpha)^2 + (c\cos\alpha)^2} = c
+$$
 
 * **Consistent Transit Time Through the Telescope:** For a telescope of proper length $L_0$, an observer at rest in the ECI frame sees the tilted light pulse travel straight down the tube at speed $c$ in proper time $\Delta\tau = \frac{L_0}{c}$. In the Heliocentric frame, the photon also travels at speed $c$, but along a longer diagonal path while the moving telescope undergoes length contraction along the orbital axis, yielding a coordinate transit time $\Delta T = \gamma \frac{L_0}{c}$—reconciled by standard time dilation ($\Delta T = \gamma \Delta\tau$).
 * **Ruling Out Complete Ether Drag:** If Earth's local ECI pocket physically dragged distant starlight along with its $30\text{ km/s}$ orbital motion, starlight would enter the ECI frame vertically and no stellar aberration would occur ($\alpha = 0$). Instead, the observed $20.5''$ aberration confirms that light propagates at the invariant speed $c$ across both frames, with Lorentz geometry linking their angles and clock rates.
@@ -305,7 +309,9 @@ Because Earth is in free fall around the Sun, the non-rotating ECI frame acts as
 * **Extended Lifespan:** Its coordinate lifetime stretches to $\Delta t_{\text{ECI}} = \gamma \tau_0 = 20 \times 2.2\ \mu\text{s} = 44\ \mu\text{s}$, allowing it to cover $v \cdot \Delta t_{\text{ECI}} \approx 13.18\text{ km}$ and easily reach the ground before decaying.
 
 **The Heliocentric Perspective**
-How does this same decay look from the overarching Heliocentric frame, where Earth is hurtling through space at $30\text{ km/s}$? Here, the muon's velocity is the relativistic vector sum of Earth's orbital velocity and the muon's downward velocity ($\vec{v}_{\text{helio}} = \vec{v}_{\text{Earth}} \oplus \vec{v}_{\text{muon}}$):
+How does this same decay look from the overarching Heliocentric frame, where Earth is hurtling through space at $30\text{ km/s}$? Here, the muon's velocity is the relativistic vector sum of Earth's orbital velocity and the muon's downward velocity 
+
+$$\vec{v}_{\text{helio}} = \vec{v}_{\text{Earth}} \oplus \vec{v}_{\text{muon}}$$
 
 * Depending on the muon's angle relative to Earth's orbital motion (e.g., noon vs. midnight, or leading vs. trailing hemisphere), its heliocentric speed and Lorentz factor $\gamma_{\text{helio}}$ shift slightly, altering the coordinate duration $\Delta t_{\text{helio}} = \gamma_{\text{helio}} \tau_0$ measured by heliocentric clocks.
 * However, during that same interval $\Delta t_{\text{helio}}$, the ground detector is also moving through the solar system at $30\text{ km/s}$, while the atmospheric column is Lorentz-contracted along Earth's orbital vector. When the muon's diagonal trajectory intersects the moving detector, the $30\text{ km/s}$ orbital terms cancel out completely. Every heliocentric observer computes the exact same invariant proper time $\Delta \tau = \sqrt{\Delta t_{\text{helio}}^2 - \lvert\Delta \vec{x}_{\text{helio}}\rvert^2 / c^2} = 2.2\ \mu\text{s}$ and predicts the exact same impact event.

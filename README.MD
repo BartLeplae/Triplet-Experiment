@@ -436,6 +436,13 @@ python plot_worldlines.py
 
 *Outputs: `triplet_worldlines.png`*
 
+## Acknowledgments
+
+The conceptual design, physical questions, and verification of this project are the work of the author. **Google Gemini** was used as an AI collaborator to assist with:
+* Refining and debugging the Python simulation and visualization scripts (including the 2D rescaled spacetime worldlines).
+* Checking relativistic derivations (proper time integration, Lorentz transformations, and the one-way Sagnac light-time terms).
+* Structuring, translating, and formatting the English technical documentation and LaTeX equations in this `README.md`.
+
 ## References
 
 * **Ashby, N. (2003).** *Relativity in the Global Positioning System.* Living Reviews in Relativity, 6(1), 1. https://doi.org/10.12942/lrr-2003-1

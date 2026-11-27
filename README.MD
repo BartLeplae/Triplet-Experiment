@@ -24,11 +24,12 @@ This project simulates the kinematics and resulting relativistic effects of thre
 * [8. The Michelson-Gale Experiment & The Sagnac Effect](#8-the-michelson-gale-experiment--the-sagnac-effect)
 * [9. Stellar Aberration & The Limits of Local Inertial Frames](#9-stellar-aberration--the-limits-of-local-inertial-frames)
 * [10. Atmospheric Muon Decay & The Co-Moving Observer Trap](#10-atmospheric-muon-decay--the-co-moving-observer-trap)
-* [11. Activate the Environment](#11-activate-the-environment)
-* [12. Run the Simulations](#12-run-the-simulations)
-  * [12.1 The 30/90 Relative Launch Scenario (Constant 60 km/s Heliocentric)](#121-the-3090-relative-launch-scenario-constant-60-kms-heliocentric)
-  * [12.2 The 60/60 Relative Launch Scenario (Variable Heliocentric)](#122-the-6060-relative-launch-scenario-variable-heliocentric)
-  * [12.3 Spacetime Worldlines Comparison (2D Rescaled Plot)](#123-spacetime-worldlines-comparison-2d-rescaled-plot)
+* [11. Rømer's Experiment & Interplanetary Light-Time (The One-Way Sagnac Effect)](#11-rømers-experiment--interplanetary-light-time-the-one-way-sagnac-effect)
+* [12. Activate the Environment](#12-activate-the-environment)
+* [13. Run the Simulations](#13-run-the-simulations)
+  * [13.1 The 30/90 Relative Launch Scenario (Constant 60 km/s Heliocentric)](#131-the-3090-relative-launch-scenario-constant-60-kms-heliocentric)
+  * [13.2 The 60/60 Relative Launch Scenario (Variable Heliocentric)](#132-the-6060-relative-launch-scenario-variable-heliocentric)
+  * [13.3 Spacetime Worldlines Comparison (2D Rescaled Plot)](#133-spacetime-worldlines-comparison-2d-rescaled-plot)
 * [References](#references)
 
 ## 1. The Classic Twin Paradox Perception
@@ -327,14 +328,61 @@ A common conceptual pitfall is trying to evaluate the experiment simply by jumpi
 2. **Relativistic Aberration of "Parallel" Trajectories:** Because velocity vectors transform non-linearly between frames moving at $30\text{ km/s}$, a muon falling vertically (parallel to the zenith) in the ECI frame follows a tilted path in the Heliocentric frame. Defining an observer as "parallel" to the muon is therefore frame-dependent unless both spatial and temporal coordinates are transformed together.
 3. **Inertial Boundary Conditions:** Unlike the ECI or Heliocentric frames—which treat the atmosphere and ground station as a single coherent coordinate grid—a parallel observer never comes to rest at the detector. Any direct clock comparison on Earth requires either a network of spatially separated, synchronized ground clocks ($\Delta x' \neq 0$) or a rapid deceleration that breaks inertial symmetry, just as in the Twin Paradox.
 
-## 11. Activate the Environment
+## 11. Rømer's Experiment & Interplanetary Light-Time (The One-Way Sagnac Effect)
+
+In 1676, Ole Rømer made the first quantitative demonstration that the speed of light is finite by timing the eclipses of Jupiter's moon Io across Earth's orbit. Over the six months between opposition ($D \approx 4.2\text{ AU}$) and conjunction ($D \approx 6.2\text{ AU}$), the observed eclipse times accumulate a delay of roughly $\frac{2\text{ AU}}{c} \approx 998\text{ s}$ ($\approx 16.6\text{ minutes}$). Re-evaluating Rømer's measurement through the framework of this project illustrates exactly where the local ECI frame stops working and why interplanetary light-time calculations must transition to the overarching Heliocentric (barycentric) frame.
+
+**Why the Local ECI Frame Breaks Down at Jupiter's Distance**
+Although light always travels locally at $c$ in any instantaneous inertial frame—including the ECI frame near Earth for GPS—the Equivalence Principle only cancels the Sun's gravity locally at Earth's center ($\vec{a}_{\text{Earth}} = -\nabla\Phi_{\text{sun}}(\vec{r}_E)$):
+
+* **Spatial Limit (Metric Distortion):** Extending Earth's free-falling ECI frame out to Jupiter ($4.2\text{–}6.2\text{ AU}$) leaves a mismatch between Earth's orbital acceleration and the much weaker solar gravity at Jupiter, introducing a coordinate metric distortion of order $\sim 3.3 \times 10^{-8}$ (an apparent shift in coordinate light speed of $\sim 10\text{ m/s}$).
+
+* **Temporal Limit (Frame Switching Over Six Months):** Over the six months between opposition and conjunction, Earth's orbital velocity reverses from $+30\text{ km/s}$ to $-30\text{ km/s}$ ($\Delta v \approx 60\text{ km/s}$). Stitching together a geocentric coordinate grid across months forces the plane of simultaneity at Jupiter's distance ($r_J \approx 5.2\text{ AU}$) to tilt by $\Delta t = \frac{\Delta v \cdot r_J}{c^2} \approx 0.52\text{ s}$.
+
+Consequently, in alignment with the IAU 2000 relativistic standards (Soffel et al., 2003), interplanetary light propagation must be computed in the single, uninterrupted **non-rotating Heliocentric (barycentric) frame**, where light travels at the constant coordinate speed $c$ (modulo the small gravitational Shapiro delay of tens of microseconds near the Sun).
+
+**The Heliocentric Light-Time Equation: Receiver Motion vs. Source Motion**
+In the non-rotating Heliocentric frame, the exact light-travel time from Io's eclipse at $t_{\text{emit}}$ to Earth's telescope at $t_{\text{recv}}$ satisfies:
+
+$$
+c\,(t_{\text{recv}} - t_{\text{emit}}) = \lvert\vec{r}_E(t_{\text{recv}}) - \vec{r}_J(t_{\text{emit}})\rvert
+$$
+
+This equation highlights a crucial relativistic asymmetry during the $35\text{–}52\text{ minutes}$ that the photon is in flight:
+
+* **Jupiter's Motion During Flight (Source Independence):** Once the photon leaves Io at $\vec{r}_J(t_{\text{emit}})$, the speed of light $c$ is independent of the source's motion; Jupiter's subsequent $27,400\text{–}40,400\text{ km}$ of orbital travel during the photon's journey has no effect on that photon's arrival time (though astronomers must account for Jupiter's motion when back-calculating $\vec{r}_J(t_{\text{emit}})$ from $t_{\text{recv}}$ and when tracking the changing eclipse interval between consecutive 42.5-hour orbits).
+
+* **Earth's Motion During Flight (The Moving Receiver):** While the photon is in transit, Earth advances $62,500\text{–}92,200\text{ km}$ along its orbit, so the photon must intercept Earth at its *arrival* position $\vec{r}_E(t_{\text{recv}})$, not its emission-time position $\vec{r}_E(t_{\text{emit}})$.
+
+**The Solar-System One-Way Sagnac Effect ($\pm 0.258\text{ s}$)**
+Expanding Earth's motion during light transit to first order around $t_{\text{emit}}$ ($\vec{r}_E(t_{\text{recv}}) \approx \vec{r}_E(t_{\text{emit}}) + \vec{v}_E \frac{D_0}{c}$) yields the extra flight time due to Earth's movement:
+
+$$
+\Delta t_{\text{extra}} = \frac{\vec{v}_E \cdot (\vec{r}_E - \vec{r}_J)}{c^2}
+$$
+
+Substituting Earth's orbital velocity as a rotation around the Sun ($\vec{v}_E = \vec{\omega}_E \times \vec{r}_E$) eliminates the radial term ($(\vec{\omega}_E \times \vec{r}_E) \cdot \vec{r}_E = 0$) and reduces directly to the **one-way Sagnac area formula**:
+
+$$
+\Delta t_{\text{extra}} = \frac{\vec{\omega}_E \cdot (\vec{r}_J \times \vec{r}_E)}{c^2} = \frac{2\,\vec{\omega}_E \cdot \vec{A}}{c^2}
+$$
+
+Here, $\vec{A} = \frac{1}{2}(\vec{r}_J \times \vec{r}_E)$ is the oriented area of the triangle spanned by the Sun, Jupiter, and Earth at emission:
+
+* **At Opposition and Conjunction:** The Sun, Earth, and Jupiter are collinear ($A = 0$), so the first-order receiver-motion correction vanishes ($\Delta t_{\text{extra}} = 0\text{ s}$).
+
+* **Near Quadrature ($90^\circ$ Heliocentric Separation):** The triangle area reaches its maximum ($A = \pm \frac{1}{2} r_E r_J$), extending or shortening the $\sim 44\text{ min}$ light travel time by $\Delta t_{\text{extra}} = \pm 0.258\text{ s}$.
+
+Mathematically and physically, this interplanetary light-time term is identical to the one-way Sagnac correction applied in GPS ($\sim 133\text{ ns}$ for a receiver rotating on Earth within ECI), simply scaled up by one hierarchy level: an orbiting receiver (Earth) moving within the non-rotating Heliocentric frame.
+
+## 12. Activate the Environment
 
 * `conda env create -f environment.yml`
 * `conda activate triplet-experiment`
 
-## 12. Run the Simulations
+## 13. Run the Simulations
 
-### 12.1 The 30/90 Relative Launch Scenario (Constant 60 km/s Heliocentric)
+### 13.1 The 30/90 Relative Launch Scenario (Constant 60 km/s Heliocentric)
 
 Run the static plot generator:
 
@@ -352,7 +400,7 @@ python main_animated_30_90.py
 
 *Outputs: `triplet_heliocentric_animation_30_90.mp4`*
 
-### 12.2 The 60/60 Relative Launch Scenario (Variable Heliocentric)
+### 13.2 The 60/60 Relative Launch Scenario (Variable Heliocentric)
 
 Run the static plot generator:
 
@@ -373,12 +421,12 @@ python main_animated_60_60.py
 Run the equatorial balloon (The Mirror Effect):
 
 ```bash
-python equator_balloon_mirror.py
+python equator_balloon.py
 ```
 
 *Outputs: `equator_balloon.png`*
 
-### 12.3 Spacetime Worldlines Comparison (2D Rescaled Plot)
+### 13.3 Spacetime Worldlines Comparison (2D Rescaled Plot)
 
 Run the worldlines generator:
 

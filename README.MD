@@ -22,14 +22,16 @@ This project simulates the kinematics and resulting relativistic effects of thre
 * [6. The Michelson-Morley Experiment & Frame Invariance](#6-the-michelson-morley-experiment--frame-invariance)
 * [7. The Kennedy-Thorndike Experiment: Combining Length Contraction and Time Dilation](#7-the-kennedy-thorndike-experiment-combining-length-contraction-and-time-dilation)
 * [8. The Michelson-Gale Experiment & The Sagnac Effect](#8-the-michelson-gale-experiment--the-sagnac-effect)
-* [9. Stellar Aberration & The Limits of Local Inertial Frames](#9-stellar-aberration--the-limits-of-local-inertial-frames)
-* [10. Atmospheric Muon Decay & The Co-Moving Observer Trap](#10-atmospheric-muon-decay--the-co-moving-observer-trap)
-* [11. Rømer's Experiment & Interplanetary Light-Time (The One-Way Sagnac Effect)](#11-rømers-experiment--interplanetary-light-time-the-one-way-sagnac-effect)
-* [12. Activate the Environment](#12-activate-the-environment)
-* [13. Run the Simulations](#13-run-the-simulations)
-  * [13.1 The 30/90 Relative Launch Scenario (Constant 60 km/s Heliocentric)](#131-the-3090-relative-launch-scenario-constant-60-kms-heliocentric)
-  * [13.2 The 60/60 Relative Launch Scenario (Variable Heliocentric)](#132-the-6060-relative-launch-scenario-variable-heliocentric)
-  * [13.3 Spacetime Worldlines Comparison (2D Rescaled Plot)](#133-spacetime-worldlines-comparison-2d-rescaled-plot)
+* [9. Rømer's Experiment & Interplanetary Light-Time (The One-Way Sagnac Effect)](#9-rømers-experiment--interplanetary-light-time-the-one-way-sagnac-effect)
+* [10. Stellar Aberration & The Limits of Local Inertial Frames](#10-stellar-aberration--the-limits-of-local-inertial-frames)
+* [11. Solar Eclipses & The 39-Second Timing Offset](#11-solar-eclipses--the-39-second-timing-offset)
+* [12. Atmospheric Muon Decay & The Co-Moving Observer Trap](#12-atmospheric-muon-decay--the-co-moving-observer-trap)
+
+* [13. Activate the Environment](#13-activate-the-environment)
+* [14. Run the Simulations](#14-run-the-simulations)
+  * [14.1 The 30/90 Relative Launch Scenario (Constant 60 km/s Heliocentric)](#141-the-3090-relative-launch-scenario-constant-60-kms-heliocentric)
+  * [14.2 The 60/60 Relative Launch Scenario (Variable Heliocentric)](#142-the-6060-relative-launch-scenario-variable-heliocentric)
+  * [14.3 Spacetime Worldlines Comparison (2D Rescaled Plot)](#143-spacetime-worldlines-comparison-2d-rescaled-plot)
 * [References](#references)
 
 ## 1. The Classic Twin Paradox Perception
@@ -272,63 +274,7 @@ When you apply the strict rules of Special Relativity—including the **length c
 
 The only geometric difference that survives the round trip is the rotational velocity (specifically, the fact that the southern mirrors of the rectangle move slightly faster than the northern mirrors due to Earth's curvature). Consequently, the Heliocentric observer calculates the exact same time difference as the ECI observer. The $30\text{ km/s}$ orbital drift remains entirely undetectable, while the rotation creates the exact fringe shift measured by Michelson and Gale.
 
-## 9. Stellar Aberration & The Limits of Local Inertial Frames
-
-While the Michelson-Morley experiment proves that Earth's $30\text{ km/s}$ orbital motion is undetectable within a closed, local laboratory, **stellar aberration** (discovered by James Bradley in 1727) reveals that same orbital motion when observing light arriving from distant stars outside Earth's local gravitational pocket. Over the course of a year, every star appears to trace a tiny ellipse on the celestial sphere with an angular radius of $\alpha \approx \frac{v}{c} \approx 20.5\text{ arcseconds}$ (a $41''$ peak-to-peak shift every six months).
-
-**The Heliocentric Perspective (The Tilted Telescope)**
-In the overarching Heliocentric frame—which is anchored to the distant stars and does not accelerate—a star directly above Earth's orbital plane emits light traveling straight downward at speed $c$. Meanwhile, Earth and the observer's telescope move sideways through this frame at $v \approx 30\text{ km/s}$:
-
-* Because the telescope moves horizontally while the photon travels down the length of the tube, a vertically pointed telescope would move out from under the photon, causing it to strike the trailing wall.
-* To guide the photon cleanly from the objective lens to the eyepiece, the telescope must be tilted forward in the direction of Earth's orbital velocity by an angle $\sin\alpha = \frac{v}{c}$ ($\alpha \approx 20.5''$).
-* Six months later, when Earth is on the opposite side of the Sun moving at $-30\text{ km/s}$, the telescope must tilt $20.5''$ in the opposite direction.
-
-**The ECI Perspective (Lorentz-Boosted Starlight)**
-At any single instant, the non-rotating Earth-Centered Inertial (ECI) frame acts as a valid local inertial frame in which the telescope is stationary (ignoring the tiny $\sim 0.32''$ diurnal aberration from Earth's $465\text{ m/s}$ rotation). Why does a stationary observer in ECI still see the star shifted by $20.5''$?
-
-* **Relativistic Aberration:** Transforming the incoming photon's trajectory from the Heliocentric frame into the instantaneously co-moving ECI frame requires a Lorentz boost of $v \approx 30\text{ km/s}$. Under this transformation, the angle of incoming light tilts forward by $\sin\alpha = \frac{v}{c}$, so the starlight enters the stationary ECI frame already angled at $20.5''$.
-* **A Sequence of Inertial Frames:** Because Earth orbits the Sun, the ECI frame is not a single permanent inertial frame over a full year—it is a continuous sequence of instantaneously co-moving inertial frames. The ECI frame at $t = 0$ and the ECI frame six months later ($t = 0.5\text{ years}$) are boosted by $\Delta v \approx 60\text{ km/s}$ relative to one another—the exact same $60\text{ km/s}$ frame shift that separates Observers B and C in Scenario 1 of the Triplet Experiment.
-
-**Constancy of the Speed of Light ($c$) Across Both Perspectives**
-Crucially, stellar aberration demonstrates that while the *direction* of incoming light shifts between frames, the **speed of light $c$ remains strictly constant** in both the Heliocentric and ECI frames:
-
-* **Breaking Galilean Velocity Addition:** In classical mechanics, combining vertical starlight ($c$) with Earth's horizontal motion ($v$) would yield a relative light speed inside the telescope of $\sqrt{c^2 + v^2} > c$ (or seasonal variations between $c - v$ and $c + v$ for stars lying in Earth's orbital plane). Under a Lorentz transformation, however, the boost tilts the photon's velocity components without changing its magnitude:
-
-$$
-\lvert\vec{c}_{\text{ECI}}\rvert = \sqrt{(c\sin\alpha)^2 + (c\cos\alpha)^2} = c
-$$
-
-* **Consistent Transit Time Through the Telescope:** For a telescope of proper length $L_0$, an observer at rest in the ECI frame sees the tilted light pulse travel straight down the tube at speed $c$ in proper time $\Delta\tau = \frac{L_0}{c}$. In the Heliocentric frame, the photon also travels at speed $c$, but along a longer diagonal path while the moving telescope undergoes length contraction along the orbital axis, yielding a coordinate transit time $\Delta T = \gamma \frac{L_0}{c}$—reconciled by standard time dilation ($\Delta T = \gamma \Delta\tau$).
-* **Ruling Out Complete Ether Drag:** If Earth's local ECI pocket physically dragged distant starlight along with its $30\text{ km/s}$ orbital motion, starlight would enter the ECI frame vertically and no stellar aberration would occur ($\alpha = 0$). Instead, the observed $20.5''$ aberration confirms that light propagates at the invariant speed $c$ across both frames, with Lorentz geometry linking their angles and clock rates.
-
-Whether modeled as a moving telescope catching vertical starlight (Heliocentric) or a stationary telescope catching Lorentz-tilted starlight (ECI), both perspectives agree on the physical measurement: photons travel straight down the axis of the tilted telescope at speed $c$, while the annual $41''$ swing confirms that Earth's local ECI frame continuously changes velocity around the Sun.
-
-## 10. Atmospheric Muon Decay & The Co-Moving Observer Trap
-
-Cosmic-ray muons created in Earth's upper atmosphere provide another classic test of frame invariance. A muon at rest has an average proper lifetime of only $\tau_0 \approx 2.2\ \mu\text{s}$. Traveling at $v \approx 0.9987c$ ($\gamma \approx 20$), a muon created at an altitude of $h_0 = 13\text{ km}$ routinely reaches detectors at sea level—even though Newtonian physics predicts it should decay after traveling just $v \tau_0 \approx 659\text{ m}$.
-
-**The Earth-Centered Inertial (ECI) Perspective**
-Because Earth is in free fall around the Sun, the non-rotating ECI frame acts as a valid local inertial frame where Earth's $30\text{ km/s}$ orbital velocity cancels out. In this frame, the atmosphere is essentially stationary while the muon plunges downward at $v = 0.9987c$ across a spatial distance $\Delta x_{\text{ECI}} = 13\text{ km} \neq 0$:
-
-* **Time Dilation:** Relative to ECI clocks, the muon's internal decay process slows down by a factor of $\gamma = 20$.
-* **Extended Lifespan:** Its coordinate lifetime stretches to $\Delta t_{\text{ECI}} = \gamma \tau_0 = 20 \times 2.2\ \mu\text{s} = 44\ \mu\text{s}$, allowing it to cover $v \cdot \Delta t_{\text{ECI}} \approx 13.18\text{ km}$ and easily reach the ground before decaying.
-
-**The Heliocentric Perspective**
-How does this same decay look from the overarching Heliocentric frame, where Earth is hurtling through space at $30\text{ km/s}$? Here, the muon's velocity is the relativistic vector sum of Earth's orbital velocity and the muon's downward velocity 
-
-$$\vec{v}_{\text{helio}} = \vec{v}_{\text{Earth}} \oplus \vec{v}_{\text{muon}}$$
-
-* Depending on the muon's angle relative to Earth's orbital motion (e.g., noon vs. midnight, or leading vs. trailing hemisphere), its heliocentric speed and Lorentz factor $\gamma_{\text{helio}}$ shift slightly, altering the coordinate duration $\Delta t_{\text{helio}} = \gamma_{\text{helio}} \tau_0$ measured by heliocentric clocks.
-* However, during that same interval $\Delta t_{\text{helio}}$, the ground detector is also moving through the solar system at $30\text{ km/s}$, while the atmospheric column is Lorentz-contracted along Earth's orbital vector. When the muon's diagonal trajectory intersects the moving detector, the $30\text{ km/s}$ orbital terms cancel out completely. Every heliocentric observer computes the exact same invariant proper time $\Delta \tau = \sqrt{\Delta t_{\text{helio}}^2 - \lvert\Delta \vec{x}_{\text{helio}}\rvert^2 / c^2} = 2.2\ \mu\text{s}$ and predicts the exact same impact event.
-
-**Why It Cannot Simply Be Viewed from a Parallel Co-Moving Observer**
-A common conceptual pitfall is trying to evaluate the experiment simply by jumping into the frame of an observer traveling parallel to the muon at $v = 0.9987c$. Doing so without full spacetime transformations leads to three critical errors:
-
-1. **The Symmetric Time-Dilation Fallacy:** In the parallel observer's frame, the muon is at rest ($\Delta x' = 0$) and lives only $2.2\ \mu\text{s}$, while Earth's clocks appear to run $20\times$ *slower*. Applying time dilation alone falsely suggests the muon can never reach the ground. To resolve this frame correctly, one must also account for **length contraction**—which compresses the $13\text{ km}$ atmosphere rushing upward to $h' = h_0 / \gamma = 650\text{ m}$ (crossed in $2.17\ \mu\text{s}$)—and the **Relativity of Simultaneity**, which shifts clock readings between the upper atmosphere and the ground by $\Delta t' = v h_0 / c^2 \approx 43.3\ \mu\text{s}$.
-2. **Relativistic Aberration of "Parallel" Trajectories:** Because velocity vectors transform non-linearly between frames moving at $30\text{ km/s}$, a muon falling vertically (parallel to the zenith) in the ECI frame follows a tilted path in the Heliocentric frame. Defining an observer as "parallel" to the muon is therefore frame-dependent unless both spatial and temporal coordinates are transformed together.
-3. **Inertial Boundary Conditions:** Unlike the ECI or Heliocentric frames—which treat the atmosphere and ground station as a single coherent coordinate grid—a parallel observer never comes to rest at the detector. Any direct clock comparison on Earth requires either a network of spatially separated, synchronized ground clocks ($\Delta x' \neq 0$) or a rapid deceleration that breaks inertial symmetry, just as in the Twin Paradox.
-
-## 11. Rømer's Experiment & Interplanetary Light-Time (The One-Way Sagnac Effect)
+## 9. Rømer's Experiment & Interplanetary Light-Time (The One-Way Sagnac Effect)
 
 In 1676, Ole Rømer made the first quantitative demonstration that the speed of light is finite by timing the eclipses of Jupiter's moon Io across Earth's orbit. Over the six months between opposition ($D \approx 4.2\text{ AU}$) and conjunction ($D \approx 6.2\text{ AU}$), the observed eclipse times accumulate a delay of roughly $\frac{2\text{ AU}}{c} \approx 998\text{ s}$ ($\approx 16.6\text{ minutes}$). Re-evaluating Rømer's measurement through the framework of this project illustrates exactly where the local ECI frame stops working and why interplanetary light-time calculations must transition to the overarching Heliocentric (barycentric) frame.
 
@@ -375,14 +321,120 @@ Here, $\vec{A} = \frac{1}{2}(\vec{r}_J \times \vec{r}_E)$ is the oriented area o
 
 Mathematically and physically, this interplanetary light-time term is identical to the one-way Sagnac correction applied in GPS ($\sim 133\text{ ns}$ for a receiver rotating on Earth within ECI), simply scaled up by one hierarchy level: an orbiting receiver (Earth) moving within the non-rotating Heliocentric frame.
 
-## 12. Activate the Environment
+## 10. Stellar Aberration & The Limits of Local Inertial Frames
+
+While the Michelson-Morley experiment proves that Earth's $30\text{ km/s}$ orbital motion is undetectable within a closed, local laboratory, **stellar aberration** (discovered by James Bradley in 1727) reveals that same orbital motion when observing light arriving from distant stars outside Earth's local gravitational pocket. Over the course of a year, every star appears to trace a tiny ellipse on the celestial sphere with an angular radius of $\alpha \approx \frac{v}{c} \approx 20.5\text{ arcseconds}$ (a $41''$ peak-to-peak shift every six months).
+
+**The Heliocentric Perspective (The Tilted Telescope)**
+In the overarching Heliocentric frame—which is anchored to the distant stars and does not accelerate—a star directly above Earth's orbital plane emits light traveling straight downward at speed $c$. Meanwhile, Earth and the observer's telescope move sideways through this frame at $v \approx 30\text{ km/s}$:
+
+* Because the telescope moves horizontally while the photon travels down the length of the tube, a vertically pointed telescope would move out from under the photon, causing it to strike the trailing wall.
+* To guide the photon cleanly from the objective lens to the eyepiece, the telescope must be tilted forward in the direction of Earth's orbital velocity by an angle $\sin\alpha = \frac{v}{c}$ ($\alpha \approx 20.5''$).
+* Six months later, when Earth is on the opposite side of the Sun moving at $-30\text{ km/s}$, the telescope must tilt $20.5''$ in the opposite direction.
+
+**The ECI Perspective (Lorentz-Boosted Starlight)**
+At any single instant, the non-rotating Earth-Centered Inertial (ECI) frame acts as a valid local inertial frame in which the telescope is stationary (ignoring the tiny $\sim 0.32''$ diurnal aberration from Earth's $465\text{ m/s}$ rotation). Why does a stationary observer in ECI still see the star shifted by $20.5''$?
+
+* **Relativistic Aberration:** Transforming the incoming photon's trajectory from the Heliocentric frame into the instantaneously co-moving ECI frame requires a Lorentz boost of $v \approx 30\text{ km/s}$. Under this transformation, the angle of incoming light tilts forward by $\sin\alpha = \frac{v}{c}$, so the starlight enters the stationary ECI frame already angled at $20.5''$.
+* **A Sequence of Inertial Frames:** Because Earth orbits the Sun, the ECI frame is not a single permanent inertial frame over a full year—it is a continuous sequence of instantaneously co-moving inertial frames. The ECI frame at $t = 0$ and the ECI frame six months later ($t = 0.5\text{ years}$) are boosted by $\Delta v \approx 60\text{ km/s}$ relative to one another—the exact same $60\text{ km/s}$ frame shift that separates Observers B and C in Scenario 1 of the Triplet Experiment.
+
+**Constancy of the Speed of Light ($c$) Across Both Perspectives**
+Crucially, stellar aberration demonstrates that while the *direction* of incoming light shifts between frames, the **speed of light $c$ remains strictly constant** in both the Heliocentric and ECI frames:
+
+* **Breaking Galilean Velocity Addition:** In classical mechanics, combining vertical starlight ($c$) with Earth's horizontal motion ($v$) would yield a relative light speed inside the telescope of $\sqrt{c^2 + v^2} > c$ (or seasonal variations between $c - v$ and $c + v$ for stars lying in Earth's orbital plane). Under a Lorentz transformation, however, the boost tilts the photon's velocity components without changing its magnitude:
+
+$$
+\lvert\vec{c}_{\text{ECI}}\rvert = \sqrt{(c\sin\alpha)^2 + (c\cos\alpha)^2} = c
+$$
+
+* **Consistent Transit Time Through the Telescope:** For a telescope of proper length $L_0$, an observer at rest in the ECI frame sees the tilted light pulse travel straight down the tube at speed $c$ in proper time $\Delta\tau = \frac{L_0}{c}$. In the Heliocentric frame, the photon also travels at speed $c$, but along a longer diagonal path while the moving telescope undergoes length contraction along the orbital axis, yielding a coordinate transit time $\Delta T = \gamma \frac{L_0}{c}$—reconciled by standard time dilation ($\Delta T = \gamma \Delta\tau$).
+* **Ruling Out Complete Ether Drag:** If Earth's local ECI pocket physically dragged distant starlight along with its $30\text{ km/s}$ orbital motion, starlight would enter the ECI frame vertically and no stellar aberration would occur ($\alpha = 0$). Instead, the observed $20.5''$ aberration confirms that light propagates at the invariant speed $c$ across both frames, with Lorentz geometry linking their angles and clock rates.
+
+**Planetary Aberration: Combining Light-Time Delay and Stellar Aberration**
+When observing planets rather than distant "fixed" stars, the apparent direction on the sky is governed by **planetary aberration**—the combination of two physically distinct effects that directly link Section 9 (interplanetary light-time) and stellar aberration:
+
+1. **Light-Time Delay (Source Motion):** Because light travels at finite speed $c$ in the Heliocentric frame, a photon arriving at Earth at $t_{\text{recv}}$ left the planet at an earlier retarded time $t_{\text{emit}} = t_{\text{recv}} - \tau$, where $\tau = \frac{\lvert\vec{r}_P(t_{\text{emit}}) - \vec{r}_E(t_{\text{recv}})\rvert}{c}$. Once emitted, the photon's path is independent of the planet's velocity, so it arrives from the planet's *past* position $\vec{r}_P(t_{\text{emit}})$. Relative to the planet's true instantaneous position $\vec{r}_P(t_{\text{recv}})$, this shifts the geometric line of sight backward along the planet's orbit by $-\frac{v_{P,\perp}}{c}$.
+2. **Stellar Aberration (Receiver Motion):** Upon arrival at $t_{\text{recv}}$, Earth is moving through the Heliocentric frame at $\vec{v}_E$. Just as with starlight, the telescope must tilt forward in Earth's direction of motion by $+\frac{v_{E,\perp}}{c}$ (up to $20.5''$) to catch the incoming photon.
+
+Combining both steps to first order in $v/c$, the apparent direction of a planet is displaced from its true simultaneous heliocentric direction by the difference in transverse velocities:
+
+$$
+\Delta\theta_{\text{planet}} \approx \frac{v_{E,\perp} - v_{P,\perp}}{c}
+$$
+
+* **The ECI Equivalence (First-Order Cancellation):** Substituting $\vec{r}_E(t_{\text{recv}}) \approx \vec{r}_E(t_{\text{emit}}) + \vec{v}_E \tau$ into the retarded line of sight shows that adding Earth's forward stellar aberration ($+\frac{\vec{v}_E}{c}$) cancels Earth's orbital displacement during the photon's flight to first order. Consequently, the telescope points almost exactly along $\vec{r}_P(t_{\text{emit}}) - \vec{r}_E(t_{\text{emit}})$—the relative geometric direction the planet occupied when the light was emitted. In the instantaneously co-moving ECI frame (where Earth is at rest and no receiver aberration occurs), light simply travels straight from where the planet was $\tau$ seconds earlier relative to Earth.
+* **Concrete Examples:**
+  * **The Sun ($\tau \approx 8.3\text{ min}$):** Because the Sun is effectively stationary in the Heliocentric frame ($v_{\text{Sun}} \approx 0$), there is no source-motion light-time shift, yet Earth's motion still produces the full $+20.5''$ stellar aberration—pointing the telescope directly toward the relative direction the Sun occupied $8.3\text{ minutes}$ earlier.
+  * **Jupiter at Opposition ($\tau \approx 35\text{ min}$):** Both Earth ($v_E \approx 29.8\text{ km/s}$) and Jupiter ($v_J \approx 13.1\text{ km/s}$) move in the same direction. Jupiter's light-time lag ($-9.0''$) and Earth's stellar aberration ($+20.5''$) combine to place Jupiter $+11.5''$ *ahead* of its true instantaneous position—matching where Jupiter was $35\text{ minutes}$ earlier in Earth's instantaneous ECI frame (where Jupiter moves retrograde at $-16.7\text{ km/s}$).
+* **Where the Local ECI Shortcut Breaks Down:** Just as in Rømer's experiment (Section 9), equating planetary aberration to a single straight-line vector in ECI only holds while Earth's velocity $\vec{v}_E$ remains nearly constant during $\tau$. For outer planets such as Neptune ($\tau \approx 4\text{ hours}$), Earth's orbital velocity vector rotates noticeably while the light is in transit. High-precision astrometry (IAU 2000 standards) therefore keeps the two physical steps strictly separate in the non-rotating barycentric/heliocentric frame: first solving for the retarded geometric direction $\vec{r}_P(t_{\text{emit}}) - \vec{r}_E(t_{\text{recv}})$, and only then applying the Lorentz aberration boost for Earth's exact velocity $\vec{v}_E(t_{\text{recv}})$ at reception.
+
+Whether modeled as a moving telescope catching vertical starlight (Heliocentric) or a stationary telescope catching Lorentz-tilted starlight (ECI), both perspectives agree on the physical measurement: photons travel straight down the axis of the tilted telescope at speed $c$, while the annual $41''$ swing confirms that Earth's local ECI frame continuously changes velocity around the Sun.
+
+## 11. Solar Eclipses & The 39-Second Timing Offset
+
+A total solar eclipse offers a concrete, frame-invariant test of **planetary aberration** (Section 10) by placing the Sun and the Moon directly on top of one another. Because of the finite speed of light, Earth's center passes into the Moon's shadow approximately **39 seconds earlier** than the moment of true instantaneous geometric alignment between the Sun, the Moon, and Earth's center. Both the Heliocentric and ECI perspectives predict this exact 39-second lead, yet they attribute it to completely different physical mechanisms.
+
+**The Heliocentric Perspective (The 1.28-Second Shadow Transit)**
+In the overarching Heliocentric frame, the Sun sits stationary at the origin, so the $8.3\text{ minute}$ light-travel time from the Sun introduces **no** geometric displacement of its light rays. Instead, the entire 39-second offset arises from the short $\tau_M = \frac{r_M}{c} \approx 1.282\text{ s}$ transit time across the Earth–Moon distance ($r_M \approx 384,400\text{ km}$):
+
+* **Orbital Kinematics at New Moon:** Earth moves forward along its orbit at $v_E \approx 29.78\text{ km/s}$. Because the Moon orbits Earth prograde, at New Moon it moves *opposite* to Earth's orbital velocity by $v_M \approx 1.02\text{ km/s}$, giving it a heliocentric speed of $v_{M,\text{helio}} = v_E - v_M \approx 28.76\text{ km/s}$.
+* **Shadow Lag vs. Synodic Drift:** A sunbeam blocked by the Moon at $t_{\text{block}}$ casts a shadow traveling radially outward at speed $c$, intercepting Earth's center $1.282\text{ s}$ later at $t_{\text{eclipse}}$. While that shadow is in transit, the Moon continues moving forward along the solar orbit by $v_{M,\text{helio}}\,\tau_M \approx 36.9\text{ km}$ (an angular lead of $19.8''$ as seen from Earth). Because the Moon drifts back across the instantaneous Sun–Earth line at only its synodic speed $v_{\text{syn}} = v_M - \frac{r_M}{R_E} v_E \approx 0.947\text{ km/s}$ ($\omega_{\text{syn}} \approx 0.508''/\text{s}$), true geometric alignment occurs only after the shadow has already struck Earth:
+
+$$
+\Delta t_{\text{eclipse}} = -\frac{v_{M,\text{helio}}\,\tau_M}{v_{\text{syn}}} \approx -\frac{36.9\text{ km}}{0.947\text{ km/s}} \approx -39.0\text{ s}
+$$
+
+* **Cancellation of Stellar Aberration:** Earth's $20.5''$ stellar aberration tilts the apparent sky positions of *both* the Sun and the Moon by the exact same angle. Because both bodies shift together, receiver aberration has zero effect on the eclipse timing—confirming that stepping into the Moon's shadow is a frame-invariant physical event.
+
+**The ECI Perspective (8.3-Minute Solar Lag vs. 1.28-Second Lunar Lag)**
+In the instantaneously co-moving Earth-Centered Inertial (ECI) frame, Earth's center is at rest ($v_E = 0$), so there is **no stellar aberration** at the telescope. Here, the Moon's $1.282\text{ s}$ light-time delay alone cannot explain the 39-second offset:
+
+* **Lunar Light-Time Delay:** Moving at $\omega_M \approx 0.549''/\text{s}$, the Moon appears where it was $1.282\text{ s}$ earlier—shifted backward by only $\theta_M = \omega_M \tau_M \approx 0.70''$ (equivalent to just $\sim 1.4\text{ s}$ of synodic motion).
+* **Solar Light-Time Delay:** In the ECI frame, however, the Sun sweeps across the sky at $\omega_E \approx 0.0411''/\text{s}$ ($29.78\text{ km/s}$). Because sunlight takes $\tau_{\text{Sun}} \approx 499\text{ s}$ ($8.3\text{ min}$) to travel $1\text{ AU}$, the incoming sunbeam arrives from where the Sun was $8.3\text{ minutes}$ earlier—lagging behind the Sun's true instantaneous position by $\theta_{\text{Sun}} = \omega_E \tau_{\text{Sun}} \approx 20.49''$ (equivalent to $\sim 40.4\text{ s}$ of synodic motion).
+
+The approaching Moon therefore intercepts the *apparent* Sun while still $20.49'' - 0.70'' = 19.79''$ short of true geometric syzygy:
+
+$$
+\Delta t_{\text{eclipse}} = -\frac{\theta_{\text{Sun}} - \theta_M}{\omega_{\text{syn}}} = -\frac{20.49'' - 0.70''}{0.508''/\text{s}} \approx -39.0\text{ s}
+$$
+
+**Frame Invariance & Surface-Observer Nuance**
+What appears in the Heliocentric frame as a $1.28\text{ s}$ lunar shadow transit across a rapidly moving Earth–Moon system reappears in the ECI frame as the difference between an $8.3\text{ min}$ solar light-time lag ($40.4\text{ s}$) and a $1.28\text{ s}$ lunar lag ($1.4\text{ s}$). Both frameworks agree identically on the physical event. Note that this $39\text{ s}$ figure applies strictly to geocentric alignment (Earth's center / ECI origin); for a surface observer rotating eastward on Earth's noon side (up to $465\text{ m/s}$ at the equator, moving in the same direction as the Moon's shadow), the shadow sweeps past more slowly, stretching the local timing offset between apparent totality and Sun–Moon–observer collinearity up to $\sim 75\text{ s}$ at the equator.
+
+## 12. Atmospheric Muon Decay & The Co-Moving Observer Trap
+
+Cosmic-ray muons created in Earth's upper atmosphere provide another classic test of frame invariance. A muon at rest has an average proper lifetime of only $\tau_0 \approx 2.2\ \mu\text{s}$. Traveling at $v \approx 0.9987c$ ($\gamma \approx 20$), a muon created at an altitude of $h_0 = 13\text{ km}$ routinely reaches detectors at sea level—even though Newtonian physics predicts it should decay after traveling just $v \tau_0 \approx 659\text{ m}$.
+
+**The Earth-Centered Inertial (ECI) Perspective**
+Because Earth is in free fall around the Sun, the non-rotating ECI frame acts as a valid local inertial frame where Earth's $30\text{ km/s}$ orbital velocity cancels out. In this frame, the atmosphere is essentially stationary while the muon plunges downward at $v = 0.9987c$ across a spatial distance $\Delta x_{\text{ECI}} = 13\text{ km} \neq 0$:
+
+* **Time Dilation:** Relative to ECI clocks, the muon's internal decay process slows down by a factor of $\gamma = 20$.
+* **Extended Lifespan:** Its coordinate lifetime stretches to $\Delta t_{\text{ECI}} = \gamma \tau_0 = 20 \times 2.2\ \mu\text{s} = 44\ \mu\text{s}$, allowing it to cover $v \cdot \Delta t_{\text{ECI}} \approx 13.18\text{ km}$ and easily reach the ground before decaying.
+
+**The Heliocentric Perspective**
+How does this same decay look from the overarching Heliocentric frame, where Earth is hurtling through space at $30\text{ km/s}$? Here, the muon's velocity is the relativistic vector sum of Earth's orbital velocity and the muon's downward velocity 
+
+$$\vec{v}_{\text{helio}} = \vec{v}_{\text{Earth}} \oplus \vec{v}_{\text{muon}}$$
+
+* Depending on the muon's angle relative to Earth's orbital motion (e.g., noon vs. midnight, or leading vs. trailing hemisphere), its heliocentric speed and Lorentz factor $\gamma_{\text{helio}}$ shift slightly, altering the coordinate duration $\Delta t_{\text{helio}} = \gamma_{\text{helio}} \tau_0$ measured by heliocentric clocks.
+* However, during that same interval $\Delta t_{\text{helio}}$, the ground detector is also moving through the solar system at $30\text{ km/s}$, while the atmospheric column is Lorentz-contracted along Earth's orbital vector. When the muon's diagonal trajectory intersects the moving detector, the $30\text{ km/s}$ orbital terms cancel out completely. Every heliocentric observer computes the exact same invariant proper time $\Delta \tau = \sqrt{\Delta t_{\text{helio}}^2 - \lvert\Delta \vec{x}_{\text{helio}}\rvert^2 / c^2} = 2.2\ \mu\text{s}$ and predicts the exact same impact event.
+
+**Why It Cannot Simply Be Viewed from a Parallel Co-Moving Observer**
+A common conceptual pitfall is trying to evaluate the experiment simply by jumping into the frame of an observer traveling parallel to the muon at $v = 0.9987c$. Doing so without full spacetime transformations leads to three critical errors:
+
+1. **The Symmetric Time-Dilation Fallacy:** In the parallel observer's frame, the muon is at rest ($\Delta x' = 0$) and lives only $2.2\ \mu\text{s}$, while Earth's clocks appear to run $20\times$ *slower*. Applying time dilation alone falsely suggests the muon can never reach the ground. To resolve this frame correctly, one must also account for **length contraction**—which compresses the $13\text{ km}$ atmosphere rushing upward to $h' = h_0 / \gamma = 650\text{ m}$ (crossed in $2.17\ \mu\text{s}$)—and the **Relativity of Simultaneity**, which shifts clock readings between the upper atmosphere and the ground by $\Delta t' = v h_0 / c^2 \approx 43.3\ \mu\text{s}$.
+2. **Relativistic Aberration of "Parallel" Trajectories:** Because velocity vectors transform non-linearly between frames moving at $30\text{ km/s}$, a muon falling vertically (parallel to the zenith) in the ECI frame follows a tilted path in the Heliocentric frame. Defining an observer as "parallel" to the muon is therefore frame-dependent unless both spatial and temporal coordinates are transformed together.
+3. **Inertial Boundary Conditions:** Unlike the ECI or Heliocentric frames—which treat the atmosphere and ground station as a single coherent coordinate grid—a parallel observer never comes to rest at the detector. Any direct clock comparison on Earth requires either a network of spatially separated, synchronized ground clocks ($\Delta x' \neq 0$) or a rapid deceleration that breaks inertial symmetry, just as in the Twin Paradox.
+
+
+## 13. Activate the Environment
 
 * `conda env create -f environment.yml`
 * `conda activate triplet-experiment`
 
-## 13. Run the Simulations
+## 14. Run the Simulations
 
-### 13.1 The 30/90 Relative Launch Scenario (Constant 60 km/s Heliocentric)
+### 14.1 The 30/90 Relative Launch Scenario (Constant 60 km/s Heliocentric)
 
 Run the static plot generator:
 
@@ -400,7 +452,7 @@ python main_animated_30_90.py
 
 *Outputs: `triplet_heliocentric_animation_30_90.mp4`*
 
-### 13.2 The 60/60 Relative Launch Scenario (Variable Heliocentric)
+### 14.2 The 60/60 Relative Launch Scenario (Variable Heliocentric)
 
 Run the static plot generator:
 
@@ -426,7 +478,7 @@ python equator_balloon.py
 
 *Outputs: `equator_balloon.png`*
 
-### 13.3 Spacetime Worldlines Comparison (2D Rescaled Plot)
+### 14.3 Spacetime Worldlines Comparison (2D Rescaled Plot)
 
 Run the worldlines generator:
 
